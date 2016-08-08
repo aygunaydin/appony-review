@@ -63,7 +63,7 @@ curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
 $headers = array();
-$headers[] = "X-Apptweak-Key:".$androidToken;
+$headers[] = "X-Apptweak-Key:".$row["androidToken"];
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 $bipAndroidResponse = curl_exec($ch);
